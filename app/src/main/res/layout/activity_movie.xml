@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MovieActivity">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1.0"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+                >
+
+                <EditText
+                    android:id="@+id/editTextSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:hint="What are you looking for?"
+                    android:inputType="text"
+                    />
+
+                <Button
+                    android:id="@+id/buttonSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:hint="Search"
+                    android:inputType="text"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/search_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search Results"
+                android:visibility="gone"
+                />
+
+            <GridView
+                android:id="@+id/pop_movies_grid0"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:columnWidth="@dimen/grid_col_width"
+                android:horizontalSpacing="10dp"
+                android:layout_margin="10dp"
+                android:verticalSpacing="10dp"
+                android:numColumns="2"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Movies"
+                />
+
+            <GridView
+            android:id="@+id/pop_movies_grid"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:columnWidth="@dimen/grid_col_width"
+            android:horizontalSpacing="10dp"
+            android:layout_margin="10dp"
+            android:verticalSpacing="10dp"
+            android:numColumns="2"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Rated Movies"
+                />
+
+            <GridView
+                android:id="@+id/pop_movies_grid2"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:columnWidth="@dimen/grid_col_width"
+                android:horizontalSpacing="10dp"
+                android:layout_margin="10dp"
+                android:verticalSpacing="10dp"
+                android:numColumns="2"
+                />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/indeterminateBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"/>
+    </FrameLayout>
+
+
+</LinearLayout>
